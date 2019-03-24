@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- text -->
+    <dimen name="text_l">18sp</dimen>
+    <dimen name="text_s">10sp</dimen>
+    <!-- space -->
+    <dimen name="space_m">8dp</dimen>
+    <dimen name="space_l">16dp</dimen>
+</resources>
