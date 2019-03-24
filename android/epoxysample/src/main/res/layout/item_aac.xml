@@ -7,12 +7,16 @@
         <variable name="item"
                   type="birth.h3.app.sunaba.epoxysample.model.AACItem" />
 
+        <variable name="itemClickListener"
+                  type="android.view.View.OnClickListener" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/space_l">
+            android:layout_margin="@dimen/space_l"
+            android:onClick="@{itemClickListener}">
 
         <TextView
                 android:id="@+id/aac_name"

@@ -55,4 +55,7 @@ dependencies {
 
     // recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    // customtabs
+    implementation 'androidx.browser:browser:1.0.0'
 }
