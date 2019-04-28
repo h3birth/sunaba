@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/epoxysample" />
+            <option value="$PROJECT_DIR$/pagingepoxysample" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
