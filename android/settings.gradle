@@ -1,1 +1,1 @@
-include ':epoxysample'
+include ':epoxysample', ':cameraxsample'
