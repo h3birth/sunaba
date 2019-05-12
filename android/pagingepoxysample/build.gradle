@@ -16,14 +16,13 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+        def properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        def API_KEY = properties.getProperty("DEBUG_API_KEY")
+        buildConfigField("String", "API_KEY", "\"${API_KEY}\"")
     }
 
     buildTypes {
-        debug {
-            manifestPlaceholders = [
-                    youtube_apikey: System.getenv("YoutubeAPIKey")
-            ]
-        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

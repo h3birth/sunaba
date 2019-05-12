@@ -10,7 +10,6 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val info = packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
-        Log.d("key", info.metaData.getString("youtube_apikey"))
+        Log.d("key", BuildConfig.API_KEY)
     }
 }
