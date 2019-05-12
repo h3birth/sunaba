@@ -3,8 +3,11 @@ package com.example.pagingepoxysample
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.epoxy.DataBindingEpoxyModel
 import com.example.pagingepoxysample.model.Item
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainController.ClickLister {
     private lateinit var viewModel: MainViewModel
@@ -16,7 +19,18 @@ class MainActivity : AppCompatActivity(), MainController.ClickLister {
 
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
+        recyclerView.let {
+            it.adapter = controller.adapter
+            it.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        }
 
+        setObserve()
+    }
+
+    private fun setObserve() {
+        viewModel.items.observeForever {
+            controller.submitList(it)
+        }
     }
 
     override fun onItemClickListener(item: Item) {

@@ -23,7 +23,7 @@ class MainViewModel(): ViewModel() {
     val q: MutableLiveData<String> = MutableLiveData<String>().apply { value = "" }
 
     // paging
-    val youtubeDataSourceFactory by lazy { YoutubeDataSourceFactory(YoutubeQueryParams(key, q.value!!, nextPageToken?.value!!),repository, disposable) }
+    val youtubeDataSourceFactory by lazy { YoutubeDataSourceFactory(YoutubeQueryParams(key, q.value!!, nextPageToken?.value ?: ""),repository, disposable) }
     val itemsBuilder by lazy { LivePagedListBuilder(youtubeDataSourceFactory, 5) }
     val items: LiveData<PagedList<Item>> by lazy { itemsBuilder.build() }
     val totalCount: LiveData<Int>
