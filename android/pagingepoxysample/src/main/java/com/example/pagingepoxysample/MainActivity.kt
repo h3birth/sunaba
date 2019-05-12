@@ -1,15 +1,17 @@
 package com.example.pagingepoxysample
 
-import android.app.Activity
-import android.content.pm.PackageManager
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProviders
 
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("key", BuildConfig.API_KEY)
+
+        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
     }
 }

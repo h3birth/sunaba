@@ -14,11 +14,12 @@ import com.example.pagingepoxysample.repository.YoutubeApiRepository
 import com.example.pagingepoxysample.repository.params.YoutubeQueryParams
 import io.reactivex.disposables.CompositeDisposable
 
-class MainViewModel(private val repository: YoutubeApiRepository,
-                    private val key: String): ViewModel() {
+class MainViewModel(): ViewModel() {
+    private val repository: YoutubeApiRepository = YoutubeApiRepository()
     private val disposable: CompositeDisposable = CompositeDisposable()
 
     // query
+    val key: String = BuildConfig.API_KEY
     val q: MutableLiveData<String> = MutableLiveData<String>().apply { value = "" }
 
     // paging
