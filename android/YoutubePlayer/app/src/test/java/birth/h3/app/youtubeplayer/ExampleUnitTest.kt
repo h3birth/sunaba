@@ -1,8 +1,7 @@
 package birth.h3.app.youtubeplayer
 
+import junit.framework.Assert.assertEquals
 import org.junit.Test
-
-import org.junit.Assert.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
