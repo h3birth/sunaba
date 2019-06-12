@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">material_form_sample</string>
+    <string name="email_hint">メールアドレス</string>
 </resources>
