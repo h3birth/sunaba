@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/cameraxsample" />
             <option value="$PROJECT_DIR$/epoxysample" />
+            <option value="$PROJECT_DIR$/material_form_sample" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

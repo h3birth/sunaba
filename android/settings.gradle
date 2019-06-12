@@ -1,1 +1,1 @@
-include ':epoxysample', ':cameraxsample'
+include ':epoxysample', ':cameraxsample', ':material_form_sample'
