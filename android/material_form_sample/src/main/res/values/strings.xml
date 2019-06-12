@@ -2,4 +2,5 @@
     <string name="app_name">material_form_sample</string>
     <string name="email_hint">メールアドレス</string>
     <string name="password_hint">パスワード</string>
+    <string name="login_btn">ログイン</string>
 </resources>
